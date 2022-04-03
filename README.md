@@ -11,3 +11,7 @@ django Model instance as an API response
 
 python .\manage.py makemigrations
 python .\manage.py migrate
+
+================================
+
+DRF generics RetrieveAPIView
