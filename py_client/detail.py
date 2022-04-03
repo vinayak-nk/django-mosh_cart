@@ -16,7 +16,8 @@ data = {
   "price": 100,
 }
 endpoint = 'http://127.0.0.1:9000/api/products/'
-response = requests.post(endpoint, json=data)
+# response = requests.post(endpoint, json=data) # CREATE, POST
+response = requests.get(endpoint) #LIST, get
 
 
 
