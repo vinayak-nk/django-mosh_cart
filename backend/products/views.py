@@ -4,11 +4,27 @@ from .serializers import ProductSerializer
 from .models import Product
 # Create your views here.
 
+class ProductCreateAPIView(generics.CreateAPIView):
+  queryset = Product.objects.all()
+  serializer_class = ProductSerializer
+  
+  def perform_create(self,serializer):
+    print('*******', serializer.validated_data)
+    cont = serializer.validated_data.get('content') or None
+    if cont is None:
+      cont = serializer.validated_data.get('title')
+    serializer.save(content=cont)    
+    #send django signal
+
+product_create_view = ProductCreateAPIView.as_view()
+
 
 class ProductDetailAPIView(generics.RetrieveAPIView):
   queryset = Product.objects.all()
   serializer_class = ProductSerializer
   # lookup_field = 'pk'
+  
+product_detail_view = ProductDetailAPIView.as_view()
 
 # from django.http import JsonResponse
 # from django.forms.models import model_to_dict

@@ -14,4 +14,5 @@ python .\manage.py migrate
 
 ================================
 
-DRF generics RetrieveAPIView
+1. DRF generics RetrieveAPIView
+2. DRF generics CreateAPIView
