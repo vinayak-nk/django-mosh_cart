@@ -1,1 +1,1 @@
-# django-mosh_cart
+# django-rest=framework
