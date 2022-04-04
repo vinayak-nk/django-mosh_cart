@@ -18,3 +18,4 @@ python .\manage.py migrate
 2. DRF generics CreateAPIView
 3. DRF generics ListAPIView & ListCreateAPIView
 4. Function based Views for CRUD
+5. UpdateApiView and DestroyApiView
